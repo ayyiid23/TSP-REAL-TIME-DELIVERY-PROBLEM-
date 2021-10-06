@@ -21,13 +21,13 @@ float queue(float cost_array[10][10],int n)					// Classic Queue implementation
 	to which we are going) as a maximum value.
     Repeat the steps till the complete matrix is having same maximum value.
 */
-float matrix(float orig_array[10][10],int n)				// Our Method
-{															// Time Complexity
+float matrix(float orig_array[10][10],int n)		
+{											// Time Complexity
     float cost=0.0,min, cost_array[10][10];
     int pos=0,new_pos=0,count=0;
-    for(int i=0; i<n; i++)									// n
+    for(int i=0; i<n; i++)								// n
     {
-    	for(int j=0; j<n; j++)								// n*n					
+    	for(int j=0; j<n; j++)							        // n*n					
     	{
 			if(j==0 || i==j)
     			cost_array[i][j]=max_value;
@@ -43,7 +43,7 @@ float matrix(float orig_array[10][10],int n)				// Our Method
 		for(int k=0; k<n; k++)								// n*n
         {
         	printf("\n");
-			for(int l=0; l<n; l++)							// n*n*n 	// But This is print statement is not the part of the algorithm
+			for(int l=0; l<n; l++)							// n*n*n 	
         		printf("%f	",cost_array[k][l]);
         	printf("\n");
 		}
